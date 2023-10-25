@@ -1,8 +1,8 @@
-import express from 'express';
-import validate from 'express-validation';
+const express =require('express');
+const validate =require('express-validation');
 
-import * as userController from '../controllers/user/user.controller';
-import * as userValidator from '../controllers/user/user.validator';
+const userController =require('../controllers/user/user.controller');
+const userValidator =require('../controllers/user/user.validator');
 
 const router = express.Router();
 
@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.post(
   '/login',
-  validate(userValidator.login),
+  validate(userValidator.employeeLogin),
   userController.login,
 );
 router.post(

@@ -1,32 +1,24 @@
 {
-  "name": "express-sequelize-api-boilerplate",
+  "name": "hrms-code-setup",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This is a simple boilerplate for creating APIs with NodeJs express framework.\r Here API access token encapsulated/encrypted with JWT token based system.\r  - Sample API ready for login \r  - API middlewares for normal user and Admin user\r  - ES6 import/export available to the user with spread operators\r  - Deploy your app with cluster (cluster implementation is integrated)\r  - jest test configured\r  - add test case for mock database model/functions to test controllers functions\r ## Getting Started\r You can download this repo or clone using below command. (folder-name will be project folder in which you want to start your project).\r ```\r git clone https://github.com/binitghetiya/express-sequelize-api-boilerplate.git <folder-name>\r ```\r or from **Download Zip**\r ```\r https://github.com/binitghetiya/express-sequelize-api-boilerplate \r ```\r ### Project Setup\r Once you clone or download project go into you folder",
+  "main": ".eslintrc.js",
   "scripts": {
-    "test": "jest",
-    "test:cover": "jest --coverage",
-    "start": "nodemon server.js",
-    "model:generate": "npx sequelize-cli model:generate --name",
-    "db:migrate": "npx sequelize-cli db:migrate",
-    "db:migrate:undo": "npx sequelize-cli db:migrate:undo",
-    "db:migrate:undo:all": "npx sequelize-cli db:migrate:undo:all",
-    "seed:generate": "npx sequelize-cli seed:generate --name",
-    "db:seed:all": "npx sequelize-cli db:seed:all",
-    "db:seed:undo": "npx sequelize-cli db:seed:undo",
-    "db:seed:undo:all": "npx sequelize-cli db:seed:undo:all"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binitghetiya/express-sequelize-api-boilerplate.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/binitghetiya/express-sequelize-api-boilerplate/issues"
+  },
+  "homepage": "https://github.com/binitghetiya/express-sequelize-api-boilerplate#readme",
   "dependencies": {
-    "@babel/preset-env": "^7.4.5",
-    "@babel/register": "^7.4.4",
-    "@babel/runtime": "^7.4.5",
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.4.4",
     "axios": "^0.21.2",
-    "babel-loader": "^8.0.0-beta.0",
     "body-parser": "^1.19.0",
     "cluster": "^0.7.7",
     "cors": "^2.8.5",
@@ -45,11 +37,5 @@
     "os": "^0.1.1",
     "sequelize": "^5.15.1",
     "sequelize-cli": "^5.4.0"
-  },
-  "devDependencies": {
-    "babel-jest": "^24.8.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.17.3"
   }
 }

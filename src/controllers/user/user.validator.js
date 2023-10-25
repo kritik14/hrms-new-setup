@@ -1,19 +1,19 @@
 const Joi = require('joi');
 
-export const getOtherUserProfile = {
+exports.getOtherUserProfile = {
   body: {
     userId: Joi.number().required(),
   },
 };
 
-export const changePassword = {
+exports.changePassword = {
   body: {
     oldPassword: Joi.string().required(),
     newPassword: Joi.string().required(),
   },
 };
 
-export const register = {
+exports.register = {
   body: {
     firstName: Joi.string().required(),
     lastName: Joi.string().required(),
@@ -24,11 +24,11 @@ export const register = {
   },
 };
 
-export const login = {
+// schema for elogin api
+exports.employeeLogin = {
   body: {
-    email: Joi.string()
-      .email()
-      .required(),
-    password: Joi.string().required(),
+    email: Joi.string().trim().email().required().label("Email"),
+    password: Joi.string().required().label("Password"),
+    device_id:Joi.string().optional().allow("").label("Device ID")
   },
 };
